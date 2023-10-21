@@ -14,7 +14,6 @@ public class HeaderBlock extends ElementsContainer {
     private SelenideElement profileButton;
 
     public void headerBlockIsVisible() {
-        getSelf().shouldBe(Condition.visible
-                .because("На странице должен отображаться Header"));
+        getSelf().as("Header").shouldBe(Condition.visible);
     }
 }
