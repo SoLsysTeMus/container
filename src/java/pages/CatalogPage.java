@@ -2,8 +2,11 @@ package pages;
 
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.support.FindBy;
+import pages.blocks.BreadcrumbsItem;
 import pages.blocks.HeaderBlock;
 import pages.blocks.PromocodesBlock;
+
+import java.util.List;
 
 public class CatalogPage {
 
@@ -12,6 +15,9 @@ public class CatalogPage {
 
     @FindBy(id = "promocodesWrapper")
     public PromocodesBlock promocodesBlock;
+
+    @FindBy(id = "breadcrumbsItem")
+    public List<BreadcrumbsItem> breadcrumbs;
 
     private CatalogPage() {}
 
